@@ -1,0 +1,1 @@
+Aim to utilize and expand on DOM manipulation skills. 
