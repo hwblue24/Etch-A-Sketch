@@ -24,7 +24,6 @@ function createDiv (quantity) {
         
         element = document.createElement('div');
         element.classList.add('parentContainer');
-        element.textContent = `This is a parent div`;
         container.appendChild(element);
     }
 
@@ -32,18 +31,41 @@ function createDiv (quantity) {
     const parentContainer = document.querySelectorAll('.parentContainer'); 
 
     parentContainer.forEach((parentContainer) => {
-        for (let i = 0; i<=array_childElements.length-2; i++) {
+        for (let i = 0; i<=array_childElements.length-1; i++) {
             let childElement = array_childElements[i]; 
             
             childElement = document.createElement('div');
-            childElement.classList.add('childContent');
-            childElement.textContent = `This is a child div`;
+            childElement.classList.add('childContainer');
             parentContainer.appendChild(childElement);
         }
 
     });
 
-}
+}   
 
-createDiv(6);
+createDiv(2);
 
+
+
+/*const alldiv = document.querySelector('div'); 
+
+alldiv.addEventListener('mouseover', event => {
+    if (event.target.id === 'container') {
+        return false;
+    }else {
+        event.target.style.color = 'red';
+        event.stopPropagation() 
+    }
+    
+});
+
+
+alldiv.addEventListener('mouseout', event => {
+    if (event.target.id === 'container') {
+        return false;
+    }else{
+        event.target.style.color = 'black';
+        event.stopPropagation()
+    }
+
+}); */

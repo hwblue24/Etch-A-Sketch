@@ -1,11 +1,25 @@
 #container {
-    height:100vh;
-    display:flex; 
-    justify-content: center;
+    display:flex;
+    justify-content:flex-start;
     flex-direction: column;
+    height:max-content;
+    width:max-content;
+    border:2px rgba(0, 255, 255, 0.459) solid;
 }
 
 .parentContainer {
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    height:max-content;
+    width:max-content;
+}
+
+
+
+.childContainer { 
+    
+    height:50px;
+    width:50px;
+    border:2px rgba(0, 255, 255, 0.459) solid;
+
 }
