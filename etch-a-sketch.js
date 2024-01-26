@@ -1,3 +1,4 @@
+createDiv(10);
 function createDiv (quantity) {
     //Sets up empty string lists 
     let stringParentElement = ""; 
@@ -43,29 +44,17 @@ function createDiv (quantity) {
 
 }   
 
-createDiv(2);
 
 
 
-/*const alldiv = document.querySelector('div'); 
 
-alldiv.addEventListener('mouseover', event => {
-    if (event.target.id === 'container') {
-        return false;
-    }else {
-        event.target.style.color = 'red';
-        event.stopPropagation() 
+const Container = document.querySelector('#container');
+
+Container.addEventListener('mouseover', (event)=> {
+    const target = event.target;
+    // classList.value picks up class selector 'childContainer' 
+    if (target.classList.value === 'childContainer') {
+        event.target.style.background = 'black';
     }
-    
 });
 
-
-alldiv.addEventListener('mouseout', event => {
-    if (event.target.id === 'container') {
-        return false;
-    }else{
-        event.target.style.color = 'black';
-        event.stopPropagation()
-    }
-
-}); */
