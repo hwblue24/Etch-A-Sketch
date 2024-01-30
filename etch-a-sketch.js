@@ -1,4 +1,15 @@
-createDiv(10);
+const button = document.querySelector('button');
+
+button.addEventListener('click', e => {
+    let digit = prompt('Pick a number between 1-100');
+    if (digit>100 || digit <1) { 
+        prompt('Click Start')
+    }else {
+        createDiv(digit);
+    }
+    
+})
+
 function createDiv (quantity) {
     //Sets up empty string lists 
     let stringParentElement = ""; 
@@ -28,7 +39,7 @@ function createDiv (quantity) {
         container.appendChild(element);
     }
 
-    // selects all parentContainers and iterates through nodelist attaching child containers to each
+    // selects all parentContainers and iterates through node list attaching child containers to each
     const parentContainer = document.querySelectorAll('.parentContainer'); 
 
     parentContainer.forEach((parentContainer) => {
