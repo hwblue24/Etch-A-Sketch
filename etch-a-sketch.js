@@ -1,15 +1,3 @@
-const button = document.querySelector('button');
-
-button.addEventListener('click', e => {
-    let digit = prompt('Pick a number between 1-100');
-    if (digit>100 || digit <1) { 
-        prompt('Click Start')
-    }else {
-        createDiv(digit);
-    }
-    
-})
-
 function createDiv (quantity) {
     //Sets up empty string lists 
     let stringParentElement = ""; 
@@ -69,3 +57,20 @@ Container.addEventListener('mouseover', (event)=> {
     }
 });
 
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', e => {
+    const container = document.querySelector('#container');
+    while (container.firstChild) {
+        container.removeChild(container.firstChild)
+    }
+
+    let digits = prompt ("Pick a number");
+    if (digits<0 || digits>100) {
+        alert("That is too big click start again"); 
+    } else {
+        createDiv(digits);
+    }
+    
+});
