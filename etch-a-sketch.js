@@ -49,11 +49,16 @@ function createDiv (quantity) {
 
 const Container = document.querySelector('#container');
 
+
+function getRandomRGB(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
 Container.addEventListener('mouseover', (event)=> {
     const target = event.target;
     // classList.value picks up class selector 'childContainer' 
     if (target.classList.value === 'childContainer') {
-        event.target.style.background = 'black';
+        event.target.style.background = `rgb(${getRandomRGB(0,255)} ${getRandomRGB(0,255)} ${getRandomRGB(0,255)} / 40%)`;//"rgb(23 55 66 / 40% )"; 
     }
 });
 
