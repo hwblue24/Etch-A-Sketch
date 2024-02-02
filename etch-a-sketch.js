@@ -54,11 +54,15 @@ function getRandomRGB(min, max) {
     return Math.random() * (max - min) + min;
   }
 
+
+function getRandomTransparency(min, max) {
+    return Math.random() * (max - min) + min;
+  }
 Container.addEventListener('mouseover', (event)=> {
     const target = event.target;
     // classList.value picks up class selector 'childContainer' 
     if (target.classList.value === 'childContainer') {
-        event.target.style.background = `rgb(${getRandomRGB(0,255)} ${getRandomRGB(0,255)} ${getRandomRGB(0,255)} / 40%)`;//"rgb(23 55 66 / 40% )"; 
+        event.target.style.background = `rgb(${getRandomRGB(0,255)} ${getRandomRGB(0,255)} ${getRandomRGB(0,255)} / ${getRandomTransparency(1,100)})`;//"rgb(23 55 66 / 40% )"; 
     }
 });
 
